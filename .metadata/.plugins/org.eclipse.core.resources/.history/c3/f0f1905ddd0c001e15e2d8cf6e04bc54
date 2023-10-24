@@ -1,0 +1,22 @@
+package com.Microservices.services.exceptions;
+
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+import com.Microservices.services.payload.ApiResponse;
+
+@RestControllerAdvice
+public class GlobalExceptionHandler {
+    
+	
+	@ExceptionHandler(ResourceNotFoundException.class)
+	public ResponseEntity<ApiResponse> handlerResponseNotFoundException(ResourceNotFoundException ex)
+	{	
+		//ApiResponse.
+		
+		return null;
+
+	}
+}
